@@ -120,7 +120,7 @@ class Home: UIViewController {
             })
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "homeToDetail" {
             let controller = segue.destinationViewController as Detail
             controller.data = data
@@ -160,9 +160,9 @@ class Home: UIViewController {
             self.dialogView.transform = CGAffineTransformConcat(scale, translate)
         }
         
-        avatarImageView.image = UIImage(named: data[number]["avatar"])
-        imageButton.setImage(UIImage(named: data[number]["image"]), forState: UIControlState.Normal)
-        backgroundImageView.image = UIImage(named: data[number]["image"])
+        avatarImageView.image = UIImage(named: data[number]["avatar"]!)
+        imageButton.setImage(UIImage(named: data[number]["image"!]), forState: UIControlState.Normal)
+        backgroundImageView.image = UIImage(named: data[number]["image"]!)
         authorLabel.text = data[number]["author"]
         titleLabel.text = data[number]["title"]
         

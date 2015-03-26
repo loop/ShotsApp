@@ -23,7 +23,7 @@ class Detail: UIViewController {
         performSegueWithIdentifier("detailToHome", sender: sender)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "detailToHome" {
             let controller = segue.destinationViewController as Home
             controller.data = data
@@ -35,8 +35,8 @@ class Detail: UIViewController {
         super.viewDidLoad()
 
         authorLabel.text = data[number]["author"]
-        avatarImageView.image = UIImage(named: data[number]["avatar"])
-        imageView.image = UIImage(named: data[number]["image"])
+        avatarImageView.image = UIImage(named: data[number]["avatar"]!)
+        imageView.image = UIImage(named: data[number]["image"]!)
         descriptionTextView.text = data[number]["text"]
         
         backButton.alpha = 0
