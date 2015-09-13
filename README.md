@@ -2,8 +2,6 @@
 
 This is a simple (very very bare bones) application that showcases some simple animations in **Swift**.
 
-This was made using a tutorial from [Design+Code](http://designcode.io).
-
 <sub>This is very basic and doesn't have many features at all. It was made during a learning process and is kept here for reference.</sub>
 
 # Screenshots
